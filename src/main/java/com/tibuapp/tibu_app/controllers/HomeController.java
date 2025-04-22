@@ -12,7 +12,7 @@ import com.tibuapp.tibu_app.Models.User;
 @Controller
 // especifica una url adicional
 //@RequestMapping("/api")
-public class indexController {
+public class HomeController {
     
     @GetMapping("/")
     public String index(Model model) {

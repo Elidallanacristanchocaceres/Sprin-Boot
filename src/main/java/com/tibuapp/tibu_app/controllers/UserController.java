@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tibuapp.tibu_app.Models.User;
 import com.tibuapp.tibu_app.Models.Dtos.UserDto;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
 @RequestMapping("/api")
 public class UserController {
 
-@GetMapping("/")
+@GetMapping("/details")
     public UserDto index() {
         UserDto userDto = new UserDto();
         User user = new User("Elidallana", "Cristancho", "cristanchodayana062017@gmail.com");
@@ -25,9 +24,7 @@ public class UserController {
 
         return userDto;
     }
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
+
     @GetMapping("/list")
     public List<User> listusers(){
         List<User> users = new ArrayList<>();

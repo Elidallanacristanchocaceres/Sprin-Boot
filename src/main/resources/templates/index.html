@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
-    <h1 th:text="${name}"></h1>
-    <h2 th:text="${model.lastname}"></h2>
-    <h2 th:text="${model.email}"></h2>
+    <h1 th:text="${datos.nombre}"></h1>
+    <h2 th:text="${datos.apellido}"></h2>
+    <h2 th:text="${datos.email}"></h2>
+
+    <div class="botones">
+        <a href="/api/list">api list</a>
+        <a href="/api/list-users">api list users</a>
+        <a href="/">Inicio</a>
+    </div>
 </body>
 </html>
